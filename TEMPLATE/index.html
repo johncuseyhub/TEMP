@@ -1,0 +1,36 @@
+<html>
+<header>
+    <title>John Cusey</title>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+</header>
+<body>
+    <h1>Hello World</h1>
+
+    <span id="output"></span>
+
+    <p>If you click on me, I will disappear.</p>
+    <p>Click me away!</p>
+    <p>Click me too!</p>
+
+
+
+    <script>
+        $(document).ready(function(){
+            var countClicks = 0;
+
+          $("p").click(function(){
+
+            $(this).hide();
+            if(countClicks == 0){
+                $("#output").text("The texts has disappeared.")
+            }else if (countClicks == 1 ){
+                $("#output").text("The texts has disappeared. Again!")
+            }
+
+            countClicks++;
+
+          });
+        });
+        </script>
+</body>
+</html>

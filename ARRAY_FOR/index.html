@@ -1,0 +1,29 @@
+<html>
+<header>
+    <title>John Cusey</title>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+</header>
+<body>
+    <h1>Hello World</h1>
+
+    <span id="output"></span>
+
+
+    <script>
+        $(document).ready(function(){
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+            var message = "START PROGRAM <br> ";
+
+            for(var i =0; i < fruits.length; i++){
+
+                message  = message  + i + " " + fruits[i] + "<br>";
+            }
+
+            var message = message +  "END PROGRAM <br> ";
+
+            $("#output").html(message);
+        });
+        </script>
+</body>
+</html>
